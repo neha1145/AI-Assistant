@@ -140,17 +140,22 @@ if __name__=="__main__":
         elif 'offline' in query:
             speak(" hope to see you again Good Bye! ")
             quit()
+        #OPEN MICROSOFT WORD
         elif 'open word' in query:
             os.startfile('C:\ProgramData\Microsoft\Windows\Start Menu\Programs\Microsoft Office\Microsoft Office Word 2007')
+        #OPEN MICROSOFT POWERPOINT
         elif 'open powerpoint' in query:
             os.startfile('C:\ProgramData\Microsoft\Windows\Start Menu\Programs\Microsoft Office\Microsoft Office PowerPoint 2007')
+        #OPEN MICROSOFT EXCEL
         elif 'open excel' in query:
             os.startfile('C:\ProgramData\Microsoft\Windows\Start Menu\Programs\Microsoft Office\Microsoft Office Excel 2007')
+        #SEARCH IN CHROME
         elif 'search in chrome' in query:
             speak('What should I search ?')
             chromepath='C:/Program Files/Google/Chrome/Application/chrome.exe %s'
             search= takeCommand().lower()
             wb.get(chromepath).open_new_tab(search+".com")
+        #GOOGLE SEARCH
         elif 'google search' in query:
             speak('What should i search ?')
             driver = webdriver.Chrome('C:/Program Files/Google/Chrome/Application/chromedriver.exe')
